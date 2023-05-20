@@ -12,31 +12,31 @@ h2 {
   margin: 50px 15vw 50px 15vw;
   text-align: justify;
 }
-.days {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+.days{
+  margin: 100px 50px 100px 50px;
+}
+.day-showcase-wrapper{
+background-color:#021422;
+  width: 35vw;
+  height: 35vw;
+  padding: 3vw;
+  margin: 50px;
+  display: table;
+  text-align: center;
+}
+.day-showcase{
+background-color: grey;
+  text-align: center;
+  height: 35vw;
+  font-size: 10vw;
+  color: aliceblue;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.day-showcase {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+div.day-showcase-wrapper:nth-of-type(odd){
+  float: right;
 }
-
-.days {
-  background-color: #fff;
-  border: 1px solid #666;
-  padding: 20px;
-  margin: 100px;
-}
-
-.day-showcase {
-  background-color: #dce0dd;
-  border: 1px solid #666;
-  margin: 100px auto 100px auto;
-}
-.day-showcase-wrapper {
-  height: 500;
-  width: 500;
+div.day-showcase-wrapper:nth-of-type(even){
+  float: left;
 }
