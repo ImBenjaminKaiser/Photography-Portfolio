@@ -37,7 +37,7 @@ background-color:#021422;
   text-align: center;
 }
 .day-showcase{
-background-color: grey;
+background-color: transparent;
   text-align: center;
   height: 35vw;
   font-size: 10vw;
@@ -66,6 +66,17 @@ margin-bottom: 60vh;
   text-align: center;
   margin-top: -20vh;
 }
+.day1{
+	background-image: url("img/day1/BigPig/BigPig3.png");
+	background-size: cover;
+}
+.day1 {
+	--scale: 1;
+	/* use the calc function to multiply the background size by the scale value */
+	background-size: calc(100% * var(--scale)) calc(100% * var(--scale));
+	/* rest of your CSS properties here */
+	background-position: center center;
+  }
 /**----------------------------------------- menu code -------------------------------------------------------- */
 #menu {
 	background: #021829;
