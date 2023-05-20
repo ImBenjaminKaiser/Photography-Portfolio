@@ -2,30 +2,33 @@
 *{
   margin: 0;
   padding: 0;
+  /* border: white 1px solid; */
+  z-index: 2;
 }
 *::-webkit-scrollbar{
   display: none;
 }
 body {
+height: fit-content;
   background-color: #010b13;
+  margin: 0;
 }
-h1 {
+.herotext>h1 {
   font-size: 150px;
   color: aliceblue;
   text-align: center;
-  margin: 0px auto 50px auto;
+  margin: 0px auto -50px auto;
   font-family: 'Bree Serif', serif;
 }
-h2 {
+.herotext>h2 {
   color: aliceblue;
-  margin: 50px 15vw 50px 15vw;
+  margin: 50px 15vw 0px 15vw;
   text-align: justify;
   font-family: 'Ubuntu', sans-serif;
   font-size: 1vw;
 }
-.days{
-  margin: 100px 2vw 100px 2vw;
-  position: relative;
+.herotext{
+	margin-bottom: -50vw;
 }
 .day-showcase-wrapper{
 background-color:#021422;
@@ -36,17 +39,20 @@ background-color:#021422;
   display: table;
   text-align: center;
 }
-.day-showcase{
-background-color: transparent;
-  text-align: center;
-  height: 35vw;
-  font-size: 10vw;
-  color: aliceblue;
-  display: table-cell;
-  vertical-align: middle;
-  font-family: 'Abril Fatface', cursive;
-  text-shadow: 0px 0px 8px #010b13;
-}
+.day-showcase {
+	background-color: transparent;
+	text-align: center;
+	height: 35vw;
+	font-size: 6vw;
+	white-space: nowrap;
+	color: aliceblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Abril Fatface', cursive;
+	text-shadow: 0px 0px 8px #010b13;
+	text-rendering: optimizeLegibility;
+  }
 
 .days:nth-of-type(odd)>a>div{
   float: right;
@@ -57,15 +63,18 @@ background-color: transparent;
 }
 .heroimg>img{
 width:100vw;
+margin-bottom: 0;
 }
 .herotext{
-margin-top: -58vh;
-margin-bottom: 60vh;
+margin-top: -40vw;
+/* margin-bottom: 30vw; */
 }
-.see-days>h2{
+.see-days-text{
   font-size: 3vw;
   text-align: center;
-  margin-top: -20vh;
+  margin-top: -150px;
+  color: aliceblue;
+  font-family: 'Bree Serif', serif;
 }
 .day1{
 	background-image: url("img/day1/BigPig/BigPig3.png");
@@ -77,9 +86,75 @@ margin-bottom: 60vh;
 	background-size: calc(100% * var(--scale)) calc(100% * var(--scale));
 	/* rest of your CSS properties here */
 	background-position: center center;
+}
+.days-wrapper{
+	margin-top: -30vw;
+}
+.see-days>h2{
+	margin-top: 50px;
+}
+#warning-message {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0);
+	z-index: 9999;
+	text-align: center;
+	padding-top: 20%;
   }
 
-/**----------------------------------------- menu code -------------------------------------------------------- */
+  #warning-message p {
+	font-size: 24px;
+	color: #fff;
+	margin: 0;
+	padding: 0 20px;
+  }
+  @media only screen and (max-width:104.125em) {
+.day-showcase-wrapper{width: 80vw; height: 80vw; display: flex; justify-content: center; align-items: center;}
+}
+@media only screen and (max-width:94.5625em) { 
+	.herotext>h1{font-size: 100px; margin-top: 0vw;}
+	.herotext>h2{font-size: 25px;}
+}
+@media only screen and (max-width:1363px) { 
+	.herotext>h2{font-size: 15px;}
+}
+@media only screen and (max-width:1087px) { 
+	.herotext>h1{font-size: 50px; margin-top: -3vw;}
+	.see-days>h2{padding-top: 20vw; margin-bottom: 0;}
+}
+@media only screen and (min-width:2265px) { 
+.herotext{margin-bottom: 40vw;}
+}
+@media only screen and (min-width:756px) { 
+	.herotext{margin-bottom: 40vw; margin-top: -35vw;}
+}
+@media screen and (max-width: 1280px){
+	.days {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+
+	.day-showcase-wrapper {
+	  width: 50vw;
+	  height: 50vw;
+	  margin: 50px 10px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	.day-showcase {
+	  font-size: 20vw;
+	  height: 80vw;
+	}
+  }
+
+  /*---------------------------------------- menu code -------------------------------------------------------- */
 #menu {
 	background: #021829;
 	color: #FFF;

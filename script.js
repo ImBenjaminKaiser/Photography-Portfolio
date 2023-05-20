@@ -7,6 +7,15 @@ function updatemenu() {
     }
   }
 
+  window.addEventListener('resize', function() {
+    if (window.innerWidth <= 762) {
+      document.getElementById('warning-message').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.getElementById('warning-message').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
 
 var tl = gsap.timeline({paused: true});
 
