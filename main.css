@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bree+Serif&family=Ubuntu&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+*
 body {
   background-color: #010b13;
 }
@@ -6,14 +12,17 @@ h1 {
   color: aliceblue;
   text-align: center;
   margin: 100px auto 50px auto;
+  font-family: 'Bree Serif', serif;
 }
 h2 {
   color: aliceblue;
   margin: 50px 15vw 50px 15vw;
   text-align: justify;
+  font-family: 'Ubuntu', sans-serif;
 }
 .days{
-  margin: 100px 50px 100px 50px;
+  margin: 100px 2vw 100px 2vw;
+  position: relative;
 }
 .day-showcase-wrapper{
 background-color:#021422;
@@ -32,13 +41,14 @@ background-color: grey;
   color: aliceblue;
   display: table-cell;
   vertical-align: middle;
+  font-family: 'Abril Fatface', cursive;
 }
 
 div.day-showcase-wrapper:nth-of-type(odd){
-  float: right;
+  float: left;
 }
 div.day-showcase-wrapper:nth-of-type(even){
-  float: left;
+  float: right;
 }
 /**----------------------------------------- menu code -------------------------------------------------------- */
 #menu {
@@ -47,6 +57,7 @@ div.day-showcase-wrapper:nth-of-type(even){
 	height: 62px;
 	padding-left: 18px;
 	border-radius: 0px;
+  font-family: 'Ubuntu', sans-serif;
 }
 #menu ul, #menu li {
 	margin: 0 auto;
