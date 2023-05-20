@@ -1,3 +1,25 @@
+var splitInfo = new SplitType(".heading-h2", { types: 'words' })//splits the paragraph into spans of words
+var splitWelcome = new SplitType(".heading-h1", { types: 'words' })//splits the paragraph into spans of words
+var tl = gsap.timeline({ paused: true });
+window.addEventListener("load", function () {
+  tl.play();
+});
+
+tl.from("h1 > .word", {
+  opacity: 0,
+  stagger: 0.5,//like a mini timeline, delay in seconds
+})
+
+tl.from("h2 > .word", {
+  opacity: 0,
+  delay: 0.5,
+  stagger: {//random order stagger
+    from: "random",
+    amount: 0.7,
+  },
+  ease: "power3.inOut",
+})
+
 function updatemenu() {
   if (document.getElementById('responsive-menu').checked == true) {
     document.getElementById('menu').style.borderBottomRightRadius = '0';
@@ -16,6 +38,7 @@ window.addEventListener('resize', function () {
     document.body.style.overflow = 'auto';
   }
 });
+
 
 var tl1 = gsap.timeline({ paused: true });
 var tl2 = gsap.timeline({ paused: true });
@@ -108,3 +131,6 @@ document.querySelector(".day10Link").addEventListener("mouseover", function () {
 document.querySelector(".day10Link").addEventListener("mouseout", function () {
   tl10.reverse();
 });
+
+
+

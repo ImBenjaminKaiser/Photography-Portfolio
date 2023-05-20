@@ -19,6 +19,7 @@ height: fit-content;
   text-align: center;
   margin: 0px auto -50px auto;
   font-family: 'Bree Serif', serif;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 .herotext>h2 {
   color: aliceblue;
