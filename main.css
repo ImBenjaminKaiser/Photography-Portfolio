@@ -3,15 +3,17 @@
   margin: 0;
   padding: 0;
 }
-*
+*::-webkit-scrollbar{
+  display: none;
+}
 body {
   background-color: #010b13;
 }
 h1 {
-  font-size: 100px;
+  font-size: 150px;
   color: aliceblue;
   text-align: center;
-  margin: 100px auto 50px auto;
+  margin: 0px auto 50px auto;
   font-family: 'Bree Serif', serif;
 }
 h2 {
@@ -19,6 +21,7 @@ h2 {
   margin: 50px 15vw 50px 15vw;
   text-align: justify;
   font-family: 'Ubuntu', sans-serif;
+  font-size: 1vw;
 }
 .days{
   margin: 100px 2vw 100px 2vw;
@@ -44,11 +47,24 @@ background-color: grey;
   font-family: 'Abril Fatface', cursive;
 }
 
-div.day-showcase-wrapper:nth-of-type(odd){
-  float: left;
-}
-div.day-showcase-wrapper:nth-of-type(even){
+.days:nth-of-type(odd)>a>div{
   float: right;
+}
+.days:nth-of-type(even)>a>div{
+  float: left;
+  margin-left: 4vw;
+}
+.heroimg>img{
+width:100vw;
+}
+.herotext{
+margin-top: -58vh;
+margin-bottom: 60vh;
+}
+.see-days>h2{
+  font-size: 3vw;
+  text-align: center;
+  margin-top: -20vh;
 }
 /**----------------------------------------- menu code -------------------------------------------------------- */
 #menu {
