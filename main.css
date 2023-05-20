@@ -77,6 +77,9 @@ margin-bottom: 60vh;
 	/* rest of your CSS properties here */
 	background-position: center center;
   }
+  .day1-text{
+	text-shadow: 0px 0px 8px #010b13;
+  }
 /**----------------------------------------- menu code -------------------------------------------------------- */
 #menu {
 	background: #021829;
