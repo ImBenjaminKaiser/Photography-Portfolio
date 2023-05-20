@@ -1,0 +1,42 @@
+body {
+  background-color: #010b13;
+}
+h1 {
+  font-size: 100px;
+  color: aliceblue;
+  text-align: center;
+  margin: 100px auto 50px auto;
+}
+h2 {
+  color: aliceblue;
+  margin: 50px 15vw 50px 15vw;
+  text-align: justify;
+}
+.days {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.day-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  background-color: #fff;
+  border: 1px solid #666;
+  padding: 20px;
+  margin: 100px;
+}
+
+.day-showcase {
+  background-color: #dce0dd;
+  border: 1px solid #666;
+  margin: 100px auto 100px auto;
+}
+.day-showcase-wrapper {
+  height: 500;
+  width: 500;
+}
