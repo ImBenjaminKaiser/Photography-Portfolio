@@ -1,5 +1,7 @@
+gsap.registerPlugin(ScrollTrigger);
 var splitInfo = new SplitType(".heading-h2", { types: 'words' })//splits the paragraph into spans of words
 var splitWelcome = new SplitType(".heading-h1", { types: 'words' })//splits the paragraph into spans of words
+
 var tl = gsap.timeline({ paused: true });
 window.addEventListener("load", function () {
   tl.play();
@@ -52,7 +54,7 @@ var tl9 = gsap.timeline({ paused: true });
 var tl10 = gsap.timeline({ paused: true });
 
 
-tl1.to(".day1", { "--scale": 1.2, duration: 0.5, transformOrigin: "center", ease: "circ.inOut", });
+tl1.to(".day1", { "--scale": 1.2, duration: 0.8, transformOrigin: "center", ease: "circ.inOut", });
 document.querySelector(".day1Link").addEventListener("mouseover", function () {
   tl1.play();
 });
@@ -60,7 +62,7 @@ document.querySelector(".day1Link").addEventListener("mouseout", function () {
   tl1.reverse();
 });
 
-tl2.to(".day2", { "--scale": 1.2, duration: 0.5, transformOrigin: "center", ease: "circ.inOut", });
+tl2.to(".day2", { "--scale": 1.2, duration: 0.8, transformOrigin: "center", ease: "circ.inOut", });
 document.querySelector(".day2Link").addEventListener("mouseover", function () {
   tl2.play();
 });
@@ -68,7 +70,7 @@ document.querySelector(".day2Link").addEventListener("mouseout", function () {
   tl2.reverse();
 });
 
-tl3.to(".day3", { "--scale": 1.2, duration: 0.5, transformOrigin: "center", ease: "circ.inOut", });
+tl3.to(".day3", { "--scale": 1.2, duration: 0.8, transformOrigin: "center", ease: "circ.inOut", });
 document.querySelector(".day3Link").addEventListener("mouseover", function () {
   tl3.play();
 });
@@ -76,7 +78,7 @@ document.querySelector(".day3Link").addEventListener("mouseout", function () {
   tl3.reverse();
 });
 
-tl4.to(".day4", { "--scale": 1.2, duration: 0.5, transformOrigin: "center", ease: "circ.inOut", });
+tl4.to(".day4", { "--scale": 1.2, duration: 0.8, transformOrigin: "center", ease: "circ.inOut", });
 document.querySelector(".day4Link").addEventListener("mouseover", function () {
   tl4.play();
 });
@@ -84,7 +86,7 @@ document.querySelector(".day4Link").addEventListener("mouseout", function () {
   tl4.reverse();
 });
 
-tl5.to(".day5", { "--scale": 1.2, duration: 0.5, transformOrigin: "center", ease: "circ.inOut", });
+tl5.to(".day5", { "--scale": 1.2, duration: 0.8, transformOrigin: "center", ease: "circ.inOut", });
 document.querySelector(".day5Link").addEventListener("mouseover", function () {
   tl5.play();
 });
@@ -92,7 +94,7 @@ document.querySelector(".day5Link").addEventListener("mouseout", function () {
   tl5.reverse();
 });
 
-tl6.to(".day6", { "--scale": 1.2, duration: 0.5, transformOrigin: "center", ease: "circ.inOut", });
+tl6.to(".day6", { "--scale": 1.2, duration: 0.8, transformOrigin: "center", ease: "circ.inOut", });
 document.querySelector(".day6Link").addEventListener("mouseover", function () {
   tl6.play();
 });
@@ -100,7 +102,7 @@ document.querySelector(".day6Link").addEventListener("mouseout", function () {
   tl6.reverse();
 });
 
-tl7.to(".day7", { "--scale": 1.2, duration: 0.5, transformOrigin: "center", ease: "circ.inOut", });
+tl7.to(".day7", { "--scale": 1.2, duration: 0.8, transformOrigin: "center", ease: "circ.inOut", });
 document.querySelector(".day7Link").addEventListener("mouseover", function () {
   tl7.play();
 });
@@ -108,7 +110,7 @@ document.querySelector(".day7Link").addEventListener("mouseout", function () {
   tl7.reverse();
 });
 
-tl8.to(".day8", { "--scale": 1.2, duration: 0.5, transformOrigin: "center", ease: "circ.inOut", });
+tl8.to(".day8", { "--scale": 1.2, duration: 0.8, transformOrigin: "center", ease: "circ.inOut", });
 document.querySelector(".day8Link").addEventListener("mouseover", function () {
   tl8.play();
 });
@@ -116,7 +118,7 @@ document.querySelector(".day8Link").addEventListener("mouseout", function () {
   tl8.reverse();
 });
 
-tl9.to(".day9", { "--scale": 1.2, duration: 0.5, transformOrigin: "center", ease: "circ.inOut", });
+tl9.to(".day9", { "--scale": 1.2, duration: 0.8, transformOrigin: "center", ease: "circ.inOut", });
 document.querySelector(".day9Link").addEventListener("mouseover", function () {
   tl9.play();
 });
@@ -124,7 +126,7 @@ document.querySelector(".day9Link").addEventListener("mouseout", function () {
   tl9.reverse();
 });
 
-tl10.to(".day10", { "--scale": 1.2, duration: 0.5, transformOrigin: "center", ease: "circ.inOut", });
+tl10.to(".day10", { "--scale": 1.2, duration: 0.8, transformOrigin: "center", ease: "circ.inOut", });
 document.querySelector(".day10Link").addEventListener("mouseover", function () {
   tl10.play();
 });
@@ -134,3 +136,24 @@ document.querySelector(".day10Link").addEventListener("mouseout", function () {
 
 
 
+const showcaseWrappers = document.querySelectorAll('.day-showcase-wrapper');
+
+showcaseWrappers.forEach(showcaseWrapper => {
+
+  gsap.fromTo(
+    showcaseWrapper,
+    { opacity: 0, y: 100 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: showcaseWrapper,
+        start: 'top 80%',
+        end: 'bottom 50%',
+        toggleActions: 'play none none reverse'
+      }
+    }
+  );
+
+});
